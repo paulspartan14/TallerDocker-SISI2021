@@ -1,8 +1,20 @@
+### descargar una imagen de un repositorio
+
+docker pull nginx
+
+#### ver imagenes
+
+docker images
+
 ### correr un nginx
 
 docker run -d --name mynginx -p 8084:80 nginx
 
-#### Construir contenedor
+### ver contenedores
+
+docker ps
+
+#### Construir una imagen apartir de un dockerfile
 
 docker build -t myapi:v1.0 .
 
