@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    container_name: vuemerce
+    networks:
+      - default
+    environment:
+      - VIRTUAL_HOST=example.com
+      - LETSENCRYPT_HOST=example.com
+      - VIRTUAL_PORT=3000
+
+networks:
+  default:
+    external:
+      name: net-proxy

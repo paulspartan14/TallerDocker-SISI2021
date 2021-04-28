@@ -6,7 +6,9 @@ services:
       context: .
     image: api-mysql:v1.0
     container_name: node-api-compose
-    restart: always  # recomended: unless-stopped
+    restart: unless-stopped  # recomended: unless-stopped
+    ports:
+      - 3000:3000
     volumes:
       - .:/usr/src/app # solo para desarrollo
       - /usr/src/app/node_modules
