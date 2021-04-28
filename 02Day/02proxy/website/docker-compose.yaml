@@ -5,16 +5,18 @@ services:
     build: .
     restart: unless-stopped
     container_name: website
+    expose:
+      - 80
     networks: 
       - default
     environment:
-      - VIRTUAL_HOST=example.com
-      - LETSENCRYPT_HOST=example.com
+      - VIRTUAL_HOST=nginx.carmesiservices.com
+      - LETSENCRYPT_HOST=nginx.carmesiservices.com
 
 networks:
   default:
-  external:
-    name: net-proxy
+    external:
+      name: net-proxy
 
     
     
