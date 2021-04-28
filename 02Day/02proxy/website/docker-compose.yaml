@@ -5,8 +5,6 @@ services:
     build: .
     restart: unless-stopped
     container_name: website
-    expose:
-      - 80
     networks: 
       - default
     environment:
