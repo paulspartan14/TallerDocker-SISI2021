@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  website:
+    build: .
+    restart: unless-stopped
+    container_name: website
+    networks: 
+      - default
+    environment:
+      - VIRTUAL_HOST=example.com
+      - LETSENCRYPT_HOST=example.com
+
+networks:
+  default:
+  external:
+    name: net-proxy
+
+    
+    
