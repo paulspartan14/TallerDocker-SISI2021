@@ -14,7 +14,4 @@ services:
 networks:
   default:
     external:
-      name: net-proxy
-
-    
-    
+      name: net-proxy    
