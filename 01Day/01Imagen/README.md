@@ -20,7 +20,7 @@ docker build -t myapi:v1.0 .
 
 #### Correr contenedor
 
-docker run -d --name container -p 3000:3000 myapi:v1
+docker run -d --name container -p 3000:3000 myapi:v1.0
 
 #### Ver procesos dentro de un contenedor
 
